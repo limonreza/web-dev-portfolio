@@ -6,11 +6,12 @@
     "wdth" 100;
 }
 
-/* header class style */
+/* header style */
+
 .header{
-    background-image: url('../images/developer.png'), url('../images/header_bg.png');
-    background-repeat: no-repeat;
-    background-position: top left, bottom right;
+    background-image: url( '../images/developer.png'), url('../images/header_bg.png');
+    background-repeat: no-repeat no-repeat;
+    background-position: center left, bottom right; 
 }
 
 /* shared style */
@@ -88,6 +89,7 @@ nav li a{
     padding: 18px 36px 19px 35px;
     border-radius: 5px;
     border: none;
+    margin-right: 20px;
 }
 
 
@@ -95,11 +97,11 @@ nav li a{
 .banner{
     display: flex;
     justify-content: space-between;
-    margin: 0 35px 0 200px;
+    margin: 0 35px 0 230px;
 }
 
 .banner-content{
-    max-width: 585px;
+    max-width: 580px;
 }
 
 
@@ -121,7 +123,8 @@ nav li a{
 
 
 .banner-profile-pic{
-    width: 584px;
+    width: 585px;
+    
 }
 
 /* main styles */
@@ -233,8 +236,28 @@ footer input[type="text"], footer input[type="email"], footer textarea{
     border-radius: 5px;
     background-color: white;
     display: block;
-    padding: 10px 30px;
+    padding: 10px 20px;
     margin-bottom: 24px;
     border: none;
 }
 
+/* Responsive media query */
+.hide{
+    display: none;
+}
+@media screen and (max-width: 576px) {
+    .skills-container, .resume-container, footer, .about-items{
+        flex-direction: column;
+    }
+    footer, .about{
+        padding: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+
+    footer input[type="text"], footer input[type="email"], footer textarea{
+        width: calc(100% - 40px);
+    }
+    
+}
